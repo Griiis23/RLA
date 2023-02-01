@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RLA</string>
+    <string name="action_settings">Paramètres</string>
+
+
+    <string name="title_activity_settings">Paramètres</string>
+
+</resources>

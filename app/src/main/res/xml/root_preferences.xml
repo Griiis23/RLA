@@ -1,0 +1,22 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory android:title="Temps et distance">
+        <EditTextPreference
+            android:defaultValue="01:00.00"
+            android:key="time"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Temps (format mm:ss.SS)"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="400"
+            android:key="distance"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Distance (en m)"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>
