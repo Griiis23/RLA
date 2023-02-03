@@ -191,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (isTracking) {
             if (lastLocation != null) traveledDistance += location.distanceTo(lastLocation);
+            if (traveledDistance >= setDistance) stopTracking();
 
             tripLine.addPoint(new GeoPoint(location.getLatitude(), location.getLongitude()));
             mapView.invalidate();
@@ -208,14 +209,15 @@ public class MainActivity extends AppCompatActivity {
     public void startTracking() {
         lastLocation = null;
         traveledDistance = 0;
+        elapsedTime = 0;
         currentSpeed = 0;
         tripLine.setPoints(new ArrayList<GeoPoint>());
         pidController.reset();
         isTracking = true;
 
         updatePreferences();
-        updateThrottle();
         startClock();
+        updateThrottle();
 
         startButton.setText("Stop");
         distanceView.setText(String.format("%02.1f m", traveledDistance));
@@ -249,15 +251,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateThrottle() {
         float remainingDistance = setDistance - traveledDistance;
-        long remainingTime = Math.max(0, setTime - elapsedTime);
+        long remainingTime = setTime - elapsedTime;
 
         double desiredSpeed = remainingDistance / remainingTime * 1000;
-        if (remainingDistance <= 0) {
-            desiredSpeed = 0;
-            stopTracking();
-        }
-
+        if (remainingDistance <= 0) desiredSpeed = 0;
+        else if (remainingTime <= 0) desiredSpeed = 999;
         pidController.setDesiredSpeed(desiredSpeed);
+
         double throttle = pidController.getOutput(currentSpeed);
 
         throttleView.setProgress((int) throttle);

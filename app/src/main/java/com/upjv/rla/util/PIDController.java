@@ -3,7 +3,7 @@ package com.upjv.rla.util;
 import android.util.Log;
 
 public class PIDController {
-    private double Kp = 2, Ki = 5, Kd = 1;
+    private double Kp = 10, Ki = 10, Kd = 1;
     private double error, prevError, integral = 0;
     private double desiredSpeed = 0;
     private double maxOutput = 100; // max control output

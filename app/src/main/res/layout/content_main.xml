@@ -25,7 +25,7 @@
                 android:indeterminate="false"
                 android:max="100"
                 android:maxHeight="16dip"
-                android:progress="50"
+                android:progress="0"
                 android:scaleY="8" />
         </TableRow>
 
