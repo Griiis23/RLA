@@ -4,5 +4,14 @@
 
 
     <string name="title_activity_settings">Paramètres</string>
+    <string name="default_speed">0.0 km/h</string>
+    <string name="default_distance">0.0 m</string>
+    <string name="default_time">00:00.00</string>
+    <string name="label_speed">vitesse</string>
+    <string name="label_distance">distance</string>
+    <string name="label_time">temps</string>
+    <string name="button_settings">Paramètres</string>
+    <string name="button_start">Start</string>
+
 
 </resources>

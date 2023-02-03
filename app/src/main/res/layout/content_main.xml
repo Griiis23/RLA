@@ -44,7 +44,7 @@
                     android:id="@+id/speed_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.0 km/h"
+                    android:text="@string/default_speed"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
@@ -52,7 +52,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="vitesse"
+                    android:text="@string/label_speed"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
@@ -70,7 +70,7 @@
                     android:id="@+id/distance_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.0 m"
+                    android:text="@string/default_distance"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -78,7 +78,7 @@
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="distance"
+                    android:text="@string/label_distance"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -94,7 +94,7 @@
                     android:id="@+id/stopawatch_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="00:00,00"
+                    android:text="@string/default_time"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -102,7 +102,7 @@
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="temps"
+                    android:text="@string/label_time"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -117,14 +117,14 @@
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Paramètres" />
+                android:text="@string/button_settings" />
 
             <Button
                 android:id="@+id/start_button"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Start" />
+                android:text="@string/button_start" />
 
         </TableRow>
 
